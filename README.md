@@ -1,24 +1,29 @@
 # allovoisin-exo-technique
 
-## Project setup
+## Pré-requis
+- Installer Node.js ( versionrecommandée )
+- Installer Git, un logiciel de version décentralisé
+
+## Parmétrage du projet
+- Cloner le projet 
+- Se rendre dans le dossier cloner 'alloVoisin-repository'
+- Lancer la commande ci-dessous afin d'installer les dépendances nécessaires pour le projet
+
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Démarrage du projet en local
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Construire votre projet (Etape de build)
 ```
 npm run build
 ```
 
-### Lints and fixes files
+### Lancer le Linter pour analyser votre code
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
