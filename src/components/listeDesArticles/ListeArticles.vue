@@ -1,25 +1,22 @@
 <template>
   <div class="composant-global-liste-article">
-    <v-card>
-      <h2>Mes articles</h2>
-
-      <!-- liste des articles -->
-      <div class="liste-des-articles">
-        <v-expansion-panels v-model="indexArticleSelectionne">
-          <v-expansion-panel
-            v-for="(article, index) in listeDesArticles"
-            :key="index"
-          >
-            <v-expansion-panel-header @click="ouvrirInfoArticle(article)">{{
-              article.nomArticle
-            }}</v-expansion-panel-header>
-            <v-expansion-panel-content>
-              <InformationArticle :article="article" />
-            </v-expansion-panel-content>
-          </v-expansion-panel>
-        </v-expansion-panels>
-      </div>
-    </v-card>
+    <h2>Mes articles</h2>
+    <!-- liste des articles -->
+    <div class="liste-des-articles">
+      <v-expansion-panels v-model="indexArticleSelectionne">
+        <v-expansion-panel
+          v-for="(article, index) in listeDesArticles"
+          :key="index"
+        >
+          <v-expansion-panel-header @click="ouvrirInfoArticle(article)">{{
+            article.nomArticle
+          }}</v-expansion-panel-header>
+          <v-expansion-panel-content>
+            <InformationArticle :article="article" />
+          </v-expansion-panel-content>
+        </v-expansion-panel>
+      </v-expansion-panels>
+    </div>
   </div>
 </template>
 
@@ -32,7 +29,7 @@ export default {
     listeDesArticles: {
       type: Array,
       required: true,
-    },
+    }
   },
   components: {
     InformationArticle,
@@ -57,7 +54,6 @@ export default {
     },
     "$store.state.indexArticleSelectionne": function (index) {
       // Obligatoire de fermer les expensionpanel a cause du composant qui n'est pas reactif
-      console.log(index);
       if (index === -1) {
         this.indexArticleSelectionne = -1;
       }
@@ -71,6 +67,13 @@ export default {
 }
 .composant-global-liste-article {
   padding: 1rem;
-  width: 50%;
+  flex: 50%;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .liste-des-articles {
+    padding: 0;
+  }
 }
 </style>

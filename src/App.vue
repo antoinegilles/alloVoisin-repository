@@ -2,11 +2,11 @@
   <v-app>
     <v-main>
       <div class="vue-global-article">
-        <ListeArticles :listeDesArticles="listeDesArticles" />
         <AjoutArticle
           v-on:ajouter-article="ajouterArticle"
           v-on:modifier-article="modifierArticle"
         />
+        <ListeArticles :listeDesArticles="listeDesArticles" />
       </div>
 
       <!-- Snackbar -->
@@ -79,15 +79,20 @@ export default {
       this.listeDesArticles[this.$store.state.indexArticleSelectionne] =
         modificationDeLarticle;
     },
-  },
+  }
 };
 </script>
 <style scoped>
 .vue-global-article {
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   height: 100vh;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .vue-global-article {
+    flex-direction: column;
+  }
 }
 </style>
