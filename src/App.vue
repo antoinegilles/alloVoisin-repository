@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-main>
+    <v-main class="corps-application">
       <div class="vue-global-article">
         <ListeArticles :listeDesArticles="listeDesArticles" />
         <AjoutArticle
@@ -86,6 +86,9 @@ export default {
 // Surcharge a la librairie vuetify
 .v-main__wrap {
   background-color: #d6f0ff91 !important;
+}
+.v-text-field.v-text-field--enclosed .v-text-field__details {
+  margin-bottom: 0;
 }
 </style>
 

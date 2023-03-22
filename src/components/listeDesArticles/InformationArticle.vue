@@ -4,6 +4,7 @@
       <v-text-field
         :value="article.prixUnitaireHorsTaxe"
         type="number"
+        dense
         placeholder="Prix unitaire hors Taxe"
         outlined
         @change="articleModifie.prixUnitaireHorsTaxe = parseInt($event)"
@@ -15,6 +16,7 @@
       <v-text-field
         :value="article.montantTva"
         type="number"
+        dense
         placeholder="Montant de la TVA"
         outlined
         @change="articleModifie.montantTva = parseInt($event)"
