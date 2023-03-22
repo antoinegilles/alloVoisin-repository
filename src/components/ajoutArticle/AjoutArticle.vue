@@ -9,6 +9,7 @@
       <div>
         <v-text-field
           v-model="nouvelArticle.nomArticle"
+          dense
           type="text"
           aria-label="Nom de l'article a ajouter"
           placeholder="Nom de l'article"
@@ -19,6 +20,7 @@
       <div>
         <v-text-field
           v-model.number="nouvelArticle.prixUnitaireHorsTaxe"
+          dense
           type="number"
           aria-label="Prix unitaire hors taxe en euros"
           placeholder="Prix unitaire HT"
@@ -28,6 +30,7 @@
       <div>
         <v-text-field
           v-model.number="nouvelArticle.montantTva"
+          dense
           type="number"
           aria-label="Montant de la TVA en pourcentage"
           placeholder="TVA en %"
@@ -192,8 +195,7 @@ export default {
     padding: 1rem;
   }
   .composant-global-ajout-article {
-    margin-top: 1rem;
-    width: 80%;
+    width: 93%;
     margin-right: 0;
   }
 }
