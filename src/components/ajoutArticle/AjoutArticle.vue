@@ -176,7 +176,6 @@ export default {
   padding: 1rem;
   box-shadow: 0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  // height: 20rem;
   flex: 30%;
 }
 .prix-total {

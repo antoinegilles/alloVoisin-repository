@@ -90,7 +90,6 @@ export default {
     },
     prixTtc: {
       get() {
-        console.log(this.articleModifie.prixUnitaireHorsTaxe);
         const prixTva =
           this.articleModifie.prixUnitaireHorsTaxe *
           (this.articleModifie.montantTva / 100);
