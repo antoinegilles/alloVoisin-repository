@@ -172,11 +172,13 @@ export default {
   justify-content: center;
 }
 .composant-global-ajout-article {
-  margin-left: 1rem;
-  padding: 1rem;
+  margin-right: 1rem;
+  padding: .51rem;
   box-shadow: 0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   flex: 30%;
+  background-color: white;
+  border-radius: 8px;
 }
 .prix-total {
   padding-top: 0.2rem;
@@ -192,7 +194,7 @@ export default {
   .composant-global-ajout-article {
     margin-top: 1rem;
     width: 80%;
-    margin-left: 0;
+    margin-right: 0;
   }
 }
 </style>

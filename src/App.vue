@@ -2,11 +2,11 @@
   <v-app>
     <v-main>
       <div class="vue-global-article">
+        <ListeArticles :listeDesArticles="listeDesArticles" />
         <AjoutArticle
           v-on:ajouter-article="ajouterArticle"
           v-on:modifier-article="modifierArticle"
         />
-        <ListeArticles :listeDesArticles="listeDesArticles" />
       </div>
 
       <!-- Snackbar -->
@@ -79,10 +79,17 @@ export default {
       this.listeDesArticles[this.$store.state.indexArticleSelectionne] =
         modificationDeLarticle;
     },
-  }
+  },
 };
 </script>
-<style scoped>
+<style lang="scss">
+// Surcharge a la librairie vuetify
+.v-main__wrap {
+  background-color: #d6f0ff91 !important;
+}
+</style>
+
+<style lang="scss" scoped>
 .vue-global-article {
   display: flex;
   align-items: center;
